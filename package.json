@@ -1,6 +1,6 @@
 {
   "name": "@nemorize/capacitor-detect-touch-status-bar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Capacitor 5.x plugin to detect touching iOS status bar",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -9,7 +9,7 @@
   "files": [
     "dist/",
     "ios/Plugin/",
-    "CapacitorDetectTouchStatusBar.podspec"
+    "NemorizeCapacitorDetectTouchStatusBar.podspec"
   ],
   "author": "Ji Yong, Kim <nemo@qroffle.com>",
   "license": "MIT",
