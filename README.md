@@ -13,25 +13,48 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`addListener('touch', ...)`](#addlistenertouch)
+* [Interfaces](#interfaces)
+* [Type Aliases](#type-aliases)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### addListener('touch', ...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+addListener(eventName: 'touch', listenerFunc: TouchStatusBarListener) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+Listen for touch event.
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+| Param              | Type                                                                      |
+| ------------------ | ------------------------------------------------------------------------- |
+| **`eventName`**    | <code>'touch'</code>                                                      |
+| **`listenerFunc`** | <code><a href="#touchstatusbarlistener">TouchStatusBarListener</a></code> |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
 --------------------
+
+
+### Interfaces
+
+
+#### PluginListenerHandle
+
+| Prop         | Type                                      |
+| ------------ | ----------------------------------------- |
+| **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
+
+
+### Type Aliases
+
+
+#### TouchStatusBarListener
+
+<code>(): void</code>
 
 </docgen-api>

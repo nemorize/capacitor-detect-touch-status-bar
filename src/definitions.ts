@@ -1,3 +1,13 @@
+import type { PluginListenerHandle } from "@capacitor/core";
+
+export type TouchStatusBarListener = () => void;
+
 export interface CapacitorDetectTouchStatusBarPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  /**
+   * Listen for touch event.
+   */
+  addListener(
+      eventName: 'touch',
+      listenerFunc: TouchStatusBarListener
+  ): Promise<PluginListenerHandle> & PluginListenerHandle;
 }
